@@ -1,0 +1,55 @@
+[
+  {
+    "deliveryWindow": {
+      "startingTime": "2021-02-25T02:30:00",
+      "endTime": "2021-02-25T04:30:00"
+    },
+    "supportedAddresses": [
+      {
+        "street": "a",
+        "addressLine1": "b",
+        "addressLine2": "c",
+        "country": "d",
+        "postcode": "e"
+      },
+      {
+        "street": "iben gvirol",
+        "addressLine1": "non",
+        "addressLine2": "non",
+        "country": "israel",
+        "postcode": "12345"
+      },
+      {
+        "street": "jabu",
+        "addressLine1": "non",
+        "addressLine2": "non",
+        "country": "israel",
+        "postcode": "7777"
+      }
+    ]
+  },
+
+  {
+    "deliveryWindow": {
+      "startingTime":"2017-11-01T02:30:00",
+      "endTime":"2017-11-01T04:30:00"
+    },
+    "supportedAddresses": [
+      {
+        "street": "af",
+        "addressLine1": "dsfgs",
+        "addressLine2": "sg",
+        "country": "d",
+        "postcode": "e"
+      },
+      {
+        "street": "jabu",
+        "addressLine1": "non",
+        "addressLine2": "non",
+        "country": "israel",
+        "postcode": "7777"
+      }
+    ]
+  }
+]
+
