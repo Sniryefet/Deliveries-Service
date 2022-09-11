@@ -9,7 +9,6 @@ class DeliveryApplication
 
 fun main(args: Array<String>) {
 	runApplication<DeliveryApplication>(*args)
-	println(TimeslotsDao.getAllOpenTimeslots())
 
 }
 

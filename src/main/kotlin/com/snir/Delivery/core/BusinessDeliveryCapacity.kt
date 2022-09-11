@@ -21,7 +21,7 @@ object BusinessDeliveryCapacity {
         val date = timeslot.deliveryWindow.endTime.toLocalDate()
         map[date] = map[date]?.let { it + 1 } ?: 0
 
-        return map.values.any { it > 10}
+        return map.values.any { it > BUSINESS_DELIVERY_CAPACITY}
     }
 
 }

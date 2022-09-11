@@ -37,11 +37,3 @@ object HolidaysHandler {
 }
 
 
-fun main() {
-
-    val res = HolidaysHandler.getHolidays()
-
-    val stop =0
-}
-
-// 2021-2-25
