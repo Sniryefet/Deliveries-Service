@@ -12,7 +12,7 @@ typealias TimeslotId = Int
 
 object TimeslotsDao {
     private var incrementedId = 0
-    private const val timeslotThreshold = 2
+    private const val TIMES_LOT_CAPACITY_LIMIT = 2
 
     private val timeslots: MutableMap<TimeslotId, Pair<Timeslot, TimeslotCapacity>> by lazy {
         val timeslotsFile = File("src/main/resources/static/timeslots.json")
@@ -30,12 +30,12 @@ object TimeslotsDao {
 
     fun getTimeslotAndCap(timeslotId: TimeslotId): Pair<Timeslot, TimeslotId> = timeslots[timeslotId] ?: throw Exception("Could not find the timeslot in store")
 
-    fun getAllOpenTimeslots(): Set<Timeslot> = timeslots.values.toMap().filter { (key, value) -> value < timeslotThreshold }.keys
+    fun getAllOpenTimeslots(): Set<Timeslot> = timeslots.values.toMap().filter { (key, value) -> value < TIMES_LOT_CAPACITY_LIMIT }.keys
 
     fun getTimeslot(timeslotId: TimeslotId): Timeslot {
         val (timeslot, cap) = timeslots[timeslotId] ?: throw Exception("Could not find any Timeslot in store for the given Timeslot identifier")
 
-        if (cap > 2) throw Exception("Timeslot capacity reached it's threshold of $timeslotThreshold")
+        if (cap > 2) throw Exception("Timeslot capacity reached it's threshold of $TIMES_LOT_CAPACITY_LIMIT")
 
         return timeslot
     }
@@ -47,7 +47,7 @@ object TimeslotsDao {
     }
 
     private fun isAvailable(timeslotId: TimeslotId): Boolean =
-        timeslots[timeslotId]?.second?.let { it < timeslotThreshold } ?: false
+        timeslots[timeslotId]?.second?.let { it < TIMES_LOT_CAPACITY_LIMIT } ?: false
 
 
 }

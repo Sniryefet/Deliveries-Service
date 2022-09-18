@@ -10,8 +10,6 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLEncoder
 
-private val GEO_KEY: String = KeyReader.getGeoKey()
-
 @Service
 class GeocodingHandler {
     private val key: String by lazy {
