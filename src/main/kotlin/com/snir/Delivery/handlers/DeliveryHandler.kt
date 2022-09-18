@@ -13,11 +13,10 @@ import com.snir.Delivery.models.Timeslot
 import com.snir.Delivery.models.User
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.repository.findByIdOrNull
-import org.springframework.stereotype.Service
-import java.time.LocalDate
+import org.springframework.stereotype.Component
 
 
-@Service
+@Component
 class DeliveryHandler(@Autowired private val deliveriesDao: DeliveriesDao, @Autowired private val geocodingHandler: GeocodingHandler) {
 
     fun resolveAddress(oneLineAddress: String): Address = geocodingHandler.getStructuredAddress(oneLineAddress)

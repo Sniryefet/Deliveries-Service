@@ -3,6 +3,7 @@ package com.snir.Delivery.handlers
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.snir.Delivery.core.KeyReader
 import com.snir.Delivery.models.Address
+import org.springframework.stereotype.Component
 import org.springframework.stereotype.Service
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -10,7 +11,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLEncoder
 
-@Service
+@Component
 class GeocodingHandler {
     private val key: String by lazy {
         KeyReader.getGeoKey()
