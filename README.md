@@ -7,7 +7,7 @@ add possible business constraints. it also includes integration with 3rd parties
 
 
 ### Prerequisite
- Since there are 3rd parties involve we shall create API keys to use them. Please create a file under the project called ".mykeys" and add "HOLIDAYS=<YOUR_KEY>", and "GEOCODING=<YOUR_KEY>" separate by new line. You can create your API keys from the following sources: [https://holidayapi.com/docs](), [https://holidayapi.com/docs]()
+ Since there are 3rd parties involve we shall create API keys to use them. Please create a file under the project called ".mykeys" and add "HOLIDAYS=<YOUR_KEY>", and "GEOCODING=<YOUR_KEY>" separatet by new line. You can create your API keys from the following sources: [https://holidayapi.com/docs](), [https://holidayapi.com/docs]()
 
 ### Code Layers / Project Structure
 1. **api** - interface layer that expose the functionality to the world (TODO: exclude it to a different service)
